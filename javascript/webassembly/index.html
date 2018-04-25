@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WebAssembly Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body> 
+
+  <script>
+    fetch('run.wasm')
+      .then(response => response.arrayBuffer() )
+      .then(buffer => WebAssembly.instantiate(buffer, {}) )
+      .then(({module, instance}) => _callbackWebAssemblyLoaded({module, instance})); 
+      const _callbackWebAssemblyLoaded = ({module, instance}) => 
+      { 
+          // WASM call of add
+          const start = performance.now();
+          instance.exports.add(2,5);
+          const duration = performance.now() - start;
+          console.log("duration of wasm call : " + duration);
+          console.log("=================================="); 
+          // Default JS call of add
+          const start2 = performance.now();
+          add(2,5);
+          const duration2 = performance.now() - start2;
+          console.log("duration of default js call : " + duration2);
+      }
+      const add = (number1, number2) => number1 + number2;
+      
+  </script>
+   
+  </body>
+</html> 
