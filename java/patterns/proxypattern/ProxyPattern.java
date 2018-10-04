@@ -35,7 +35,7 @@ public class Run
 		
 		storage.search("FILE H"); // the first search will be slow, because we need to loop the big list completely to find our file
 		storage.search("FILE H"); // the second search will be fast, because "FILE H" exists in the cache.
-		storage.search("FILE H"); // Nothing changes here to 2) will be fast aswell.
+		storage.search("file H"); // Nothing changes here to 2) will be fast aswell.
  		storage.search("FILE A"); // same as 1) it is not cached
 		
 	  /**
@@ -71,8 +71,8 @@ public class Proxy {
 
 	public String search(String searchTerm) 
 	{
-		
 		 String matchedFile;
+		 searchTerm = searchTerm.toLowerCase();
 		 matchedFile = this.cache.get(searchTerm);
 	
 		if(matchedFile != null) 
