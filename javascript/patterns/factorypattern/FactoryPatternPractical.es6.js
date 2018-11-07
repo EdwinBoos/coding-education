@@ -4,7 +4,7 @@
 *
 * Created by Edwin Boos ( 14.11.2017 )
 * A more complexer/practical Factory pattern implementation in JavaScript (ES6) 
-* ( http://jsbin.com/lomugajigi/1/edit?js,output )
+* ( https://jsbin.com/leyuxokate/edit?html,js,output )
 *
 * We have five input elements ( firstname, lastname, email, password, repeat password ), 
 * which needs to get validated trough different Regex-patterns.
@@ -23,7 +23,7 @@ document.getElementById("emailInputId").addEventListener('input',  handleValueCh
 document.getElementById("firstNameId").addEventListener('input',  handleValueChanged, true);
 document.getElementById("lastNameId").addEventListener('input',  handleValueChanged, true);
 document.getElementById("passwordInputId").addEventListener('input',  handleValueChanged, true);
-document.getElementById("repeatPasswordInputId").addEventListener('input',  handleValueChanged, true);
+
 
 const Enum = 
  {
@@ -32,16 +32,10 @@ const Enum =
        red : "#F44336",
        green : "#4CAF50",
        white : "#FFFFFF"
-    },  
-    inputIds : 
-    {
-      emailInputId : "emailInputId",
-      firstNameId : "firstNameId",
-      lastNameId : "lastNameId",
-      passwordInputId : "passwordInputId",
-      repeatPasswordInputId : "repeatPasswordInputId"
     }
 };
+
+
 
 function handleValueChanged (event)  
 {
@@ -51,7 +45,7 @@ function handleValueChanged (event)
     event.target.updateBackgroundColor( Enum.materialColors.white );
     return this;
   } 
-  if(new RegExpFactory(Enum.inputIds).build(event.target).isValid()) 
+  if(new RegExpFactory().build(event.target).isValid()) 
   {
     event.target.updateBackgroundColor( Enum.materialColors.green );
   }
@@ -71,25 +65,20 @@ Element.prototype.updateBackgroundColor = function(color)
   
 }
 
+
 class RegExpFactory {
-
-  constructor(inputIds) 
-  {
-    this.inputIds = inputIds;
-  }
-
   build(element) {
     
-    if(element.id === this.inputIds.emailInputId) 
+    if(element.id === "emailInputId") 
     {
       return new Email(element.value);
     }
-    else if(element.id === this.inputIds.firstNameId || element.id=== this.inputIds.lastNameId)
+    else if(element.id === "firstNameId" || element.id=== "lastNameId")
     {
+
        return new Name(element.value);
     }
-    else if(element.id === this.inputIds.passwordInputId || element.id === this.inputIds.repeatPasswordInputId)
-    
+    else if(element.id === "passwordInputId" || element.id === "repeatPasswordInputId")
       return new Password(element.value);
     
     else return new NullObjectPattern();
