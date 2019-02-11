@@ -12,7 +12,7 @@
  *
  */
 package org.jsweet;
-import static jsweet.dom.Globals.*;
+
 
 
 public final class Run implements IConstants {
