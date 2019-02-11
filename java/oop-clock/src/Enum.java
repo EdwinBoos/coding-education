@@ -9,13 +9,12 @@
  */
 public interface Enum {
 
-    final class MaxTimers
-    {
+ final class MaxTimers {
 
-        public static final int MAX_SECONDS = 59;
-        public static final int MAX_MINUTES = 59;
-        public static final int MAX_HOURS = 23;
+  public static final int MAX_SECONDS = 59;
+  public static final int MAX_MINUTES = 59;
+  public static final int MAX_HOURS = 23;
 
-    }
+ }
 
 }
