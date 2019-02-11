@@ -30,9 +30,7 @@ public interface IEnums {
 
  public enum EnumCar {
   VW,
-  AUDI,
-  WINDY,
-  COLD;
+  AUDI;
 
   @Override
   public String toString() {
