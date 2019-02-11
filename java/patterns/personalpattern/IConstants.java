@@ -32,12 +32,16 @@ interface IConstants {
 
  public final class EnumCar implements IConstants {
 
+  private EnumCar() {}
+
   public final static String VW = "VW";
   public final static String AUDI = "AUDI";
 
  }
 
  public final class EnumColor implements IConstants {
+
+  private EnumColor() {}
 
   public final static String BLACK = "schwarz";
   public final static String WHITE = "weiss";
