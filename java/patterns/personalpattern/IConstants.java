@@ -2,7 +2,7 @@
 * 
 * 
 * An example for storing 'enum' like constants that belong together in only one Interface, by 
-* defining classes in the IEnum Interface.
+* defining classes in the Interface.
 * 
 * 
 * 
@@ -15,7 +15,7 @@ package org.jsweet;
 import static jsweet.dom.Globals.*;
 
 
-public final class Run implements IEnum {
+public final class Run implements IConstants {
 	
 	public static void main(String[] args) {
 		
@@ -28,16 +28,16 @@ public final class Run implements IEnum {
 }
 
 
-interface IEnum {
+interface IConstants {
 	
-	public final class EnumCar implements IEnum {
+	public final class EnumCar implements IConstants {
 		
 		public final static String VW = "VW";
 		public final static String AUDI = "AUDI";
 		
 	}
 	
-	public final class EnumColor implements IEnum {
+	public final class EnumColor implements IConstants {
 		
 		public final static String BLACK = "schwarz";
 		public final static String WHITE = "weiss";
