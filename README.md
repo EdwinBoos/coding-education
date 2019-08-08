@@ -16,6 +16,7 @@
 - null object pattern
 - proxy pattern
 - singleton pattern
+- currying
 
 #### Java :
 - oop-clock (made with love) :P
@@ -26,4 +27,4 @@
 - IEnum (store all of your Constants in one Interface sperated by different topics)
 - proxy pattern
 - singleton pattern / thread safe singleton pattern
-- currying
+
