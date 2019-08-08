@@ -12,7 +12,7 @@ const main = () => {
  data
   .filter(greater("age", 18))
   .filter(by("name", "foo"))
-  .map(object => infoLevelLog(object.name)); // Logs foo
+  .map(object => infoLevelLog(object.name)); 
 };
 
 function greater(key, value) {
