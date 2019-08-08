@@ -17,5 +17,6 @@ https://www.babeljs.io
 
 * To play around with the JavaScript [Factory Pattern Practical Example](http://jsbin.com/lomugajigi/edit?js,console,output)
 
+* To play around with the JavaScript [Currying Example](https://repl.it/repls/HighFirmConference)
 
 
