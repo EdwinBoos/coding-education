@@ -26,3 +26,4 @@
 - IEnum (store all of your Constants in one Interface sperated by different topics)
 - proxy pattern
 - singleton pattern / thread safe singleton pattern
+- currying
