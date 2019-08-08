@@ -23,8 +23,6 @@ function by(key, value) {
  return object => object[key] === value;
 }
 
-main();
-
 function curry(originalFunction, initialParams = []) {
  return (...nextParams) => {
   const curriedFunction = params => {
@@ -40,3 +38,5 @@ function curry(originalFunction, initialParams = []) {
 function log(level, text) {
  console.log(`${level} : ${text}`);
 }
+
+main();
