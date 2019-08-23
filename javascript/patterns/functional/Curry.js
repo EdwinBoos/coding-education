@@ -1,9 +1,9 @@
-const data = [
+const main = () => {
+ const data = [
  { name: "al", age: 18 },
  { name: "al", age: 32 },
  { name: "foo", age: 30 }
 ];
-const main = () => {
  const curriedLog = curry(log);
  const warningLevelLog = curriedLog("Warning");
  const infoLevelLog = curriedLog("Info");
