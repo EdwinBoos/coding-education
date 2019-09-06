@@ -19,7 +19,7 @@
 - currying
 
 #### Java :
-- oop-clock (made with love) :P
+- oop-clock
 - factory pattern
 - immutable classes
 - method chaining pattern
