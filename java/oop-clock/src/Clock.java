@@ -198,49 +198,4 @@ public interface Clock {
 
  }
 
-
- /**
-  *
-  *
-  * @author Edwin Boos
-  * Class {@link Delay}
-  *
-  *
-  */
- public final class Delay {
-
-  public Delay(int delay) {
-   this.delay = delay;
-  }
-  private final int delay;
-
-
-  public int getDelay() {
-   return this.delay;
-  }
-
- }
-
-
- /**
-  *
-  *
-  * @author Edwin Boos
-  * Class {@link Period}
-  *
-  *
-  */
- public final class Period {
-
-  public Period(int period) {
-   this.period = period;
-  }
-  private final int period;
-
-
-  public int getPeriod() {
-   return this.period;
-  }
-
- }
 }
