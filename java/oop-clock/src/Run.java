@@ -9,16 +9,21 @@ import java.util.Timer;
  *
  */
 public class Run {
-  public static void main(String[] args) {
-   final int delay = 0;
-   final int period = 1000;
-   new Timer().schedule(
-    new Clock.Work(
-     new Clock.Hour(21),
-     new Clock.Minute(59),
-     new Clock.Second(45)),
-    delay,
-    period
-   );
-  }
+
+ public Run() {
+  final int delay = 0;
+  final int period = 1000;
+  new Timer().schedule(
+   new Clock.Work(
+    new Clock.Hour(21),
+    new Clock.Minute(59),
+    new Clock.Second(45)),
+   delay,
+   period
+  );
  }
+
+ public static void main(String[] args) {
+  new Run();
+ }
+}
