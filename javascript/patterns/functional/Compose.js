@@ -7,7 +7,7 @@ const compose = (...fns) =>
 const toUpperCase = x => x.toUpperCase();
 const exclaim = x => `${x}!`;
 const hashtag = x => `#${x}`;
-const head = x => x[0];
+const head = x => x.shift();
 const reverse = x => x.reverse();
 const shoutHashtag = compose(toUpperCase, hashtag , exclaim);
 const lastItemUpperCase  = compose(toUpperCase, head, reverse);
